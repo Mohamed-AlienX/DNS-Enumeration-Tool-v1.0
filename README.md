@@ -76,7 +76,7 @@ Or install all dependencies at once:
 pip install -r requirements.txt
 ```
 
-##🚀 Usage Examples
+## 🚀 Usage Examples
 ```bash
 # Basic enumeration
 python dns_enum.py -d example.com
