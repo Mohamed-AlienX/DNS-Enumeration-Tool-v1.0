@@ -60,6 +60,7 @@ The focus is strictly on **DNS record-level intelligence and analysis**.
 ```bash
 pip install dnspython
 pip install python-whois
+
 Or install all dependencies at once:
 
 pip install -r requirements.txt
@@ -76,7 +77,7 @@ python dns_enum.py -d example.com -o results.txt
 # Custom record types and threads
 python dns_enum.py -d example.com -t 20 --record-types A,MX,NS,TXT
 ```
-##🧠 How It Works (Brief)
+## 🧠 How It Works (Brief)
 
 1. Collects DNS records using dnspython
 
@@ -88,7 +89,7 @@ python dns_enum.py -d example.com -t 20 --record-types A,MX,NS,TXT
 
 5. Summarises findings in a clean and structured output format
 
-##⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 This project is for educational purposes and authorised security testing only.
-Do NOT scan or test domains without explicit permission from the owner.
+Please don't scan or test domains without explicit permission from the owner.
