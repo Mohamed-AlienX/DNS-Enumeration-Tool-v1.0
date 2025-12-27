@@ -54,6 +54,16 @@ This tool **does NOT perform**:
 The focus is strictly on **DNS record-level intelligence and analysis**.
 
 ---
+##  Download / Clone the Project
+
+You can download or clone the project from GitHub using one of the following methods:
+
+Make sure Git is installed, then run:
+
+```bash
+git clone https://github.com/USERNAME/DNS-Enumeration-Tool-v1.0.git
+cd DNS-Enumeration-Tool-v1.0
+```
 
 ## 📦 Installation
 
