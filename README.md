@@ -5,7 +5,7 @@ A Python-based tool designed for DNS information gathering and analysis, focusin
 
 This project is built for security testing, blue team analysis, and infrastructure assessment, without performing any subdomain discovery.
 
-🎯 Purpose
+#🎯 Purpose
 
 Organizations often expose sensitive DNS information unintentionally.
 This tool helps identify:
