@@ -1,78 +1,72 @@
 # DNS-Enumeration-Tool-v1.0
 
+A Python-based tool designed for **DNS information gathering and analysis**, focusing on DNS records, zone transfer testing, reverse DNS lookups, and WHOIS data collection.
 
-A Python-based tool designed for DNS information gathering and analysis, focusing on DNS records, zone transfer testing, reverse DNS lookups, and WHOIS data collection.
+This project is built for **security testing, blue team analysis, and infrastructure assessment**, without performing any subdomain discovery.
 
-This project is built for security testing, blue team analysis, and infrastructure assessment, without performing any subdomain discovery.
+---
 
-#🎯 Purpose
+## 🎯 Purpose
 
-Organizations often expose sensitive DNS information unintentionally.
+Organisations often unintentionally expose sensitive DNS information.  
 This tool helps identify:
 
-Misconfigured DNS records
+- Misconfigured DNS records  
+- Open zone transfer vulnerabilities  
+- Infrastructure details leaked via DNS and WHOIS  
 
-Open zone transfer vulnerabilities
+It is intended for **authorised security testing and educational use only**.
 
-Infrastructure details leaked via DNS and WHOIS
+---
 
-It is intended for authorized security testing and educational use only.
+## ✨ Features
 
-✨ Features
-🔹 DNS Record Analysis
+### 🔹 DNS Record Analysis
+- Supports: `A`, `AAAA`, `CNAME`, `MX`, `NS`, `SOA`, `TXT`, `SRV`, `PTR`, `DNSKEY`, `DS`
+- Custom record type selection via CLI
 
-Supports: A, AAAA, CNAME, MX, NS, SOA, TXT, SRV, PTR, DNSKEY, DS
+### 🔹 Advanced DNS Techniques
+- Zone Transfer (AXFR) testing
+- Reverse DNS lookups
+- WHOIS information gathering
 
-Custom record type selection via CLI
+### 🔹 Performance & Usability
+- Multi-threaded execution
+- Configurable timeout and thread count
+- Optional output file saving
+- Clean and readable CLI interface
 
-🔹 Advanced DNS Techniques
+### 🔹 Stability & Error Handling
+- Graceful handling of timeouts
+- Detailed error reporting
+- Safe interruption handling (`Ctrl + C`)
 
-Zone Transfer (AXFR) testing
+---
 
-Reverse DNS lookups
+## 🚫 Out of Scope
 
-WHOIS information gathering
+This tool **does NOT perform**:
 
-🔹 Performance & Usability
+- Subdomain discovery
+- Subdomain brute forcing
+- Wordlist-based enumeration
 
-Multi-threaded execution
+The focus is strictly on **DNS record-level intelligence and analysis**.
 
-Configurable timeout and threads
+---
 
-Optional output file saving
+## 📦 Installation
 
-Clean CLI interface
-
-🔹 Stability & Error Handling
-
-Graceful handling of timeouts
-
-Detailed error reporting
-
-Safe interruption handling (Ctrl+C)
-
-🚫 Out of Scope
-
-This tool does NOT perform:
-
-Subdomain discovery
-
-Subdomain brute forcing
-
-Wordlist-based enumeration
-
-The focus is strictly on DNS record-level intelligence and analysis.
-
-📦 Installation
+```bash
 pip install dnspython
 pip install python-whois
-
-
-Or:
+Or install all dependencies at once:
 
 pip install -r requirements.txt
+```
 
-🚀 Usage Examples
+##🚀 Usage Examples
+```bash
 # Basic enumeration
 python dns_enum.py -d example.com
 
@@ -81,34 +75,20 @@ python dns_enum.py -d example.com -o results.txt
 
 # Custom record types and threads
 python dns_enum.py -d example.com -t 20 --record-types A,MX,NS,TXT
+```
+##🧠 How It Works (Brief)
 
-🧠 How It Works (Brief)
+1. Collects DNS records using dnspython
 
-Collects DNS records using dnspython
+2. Tests name servers for zone transfer misconfiguration
 
-Tests name servers for zone transfer misconfiguration
+3. Extracts ownership and registration data via WHOIS
 
-Extracts ownership and registration data via WHOIS
+4. Performs reverse DNS lookups on discovered IPs
 
-Performs reverse DNS on discovered IPs
+5. Summarises findings in a clean and structured output format
 
-Summarises findings in a clean output format
+##⚠️ Disclaimer
 
-⚠️ Disclaimer
-
-This project is for educational and authorized security testing only.
-Do not scan domains without explicit permission.
-
-📌 Skills Demonstrated
-
-Python scripting
-
-DNS protocol understanding
-
-Security misconfiguration detection
-
-CLI tool design
-
-Multithreading
-
-Error handling
+This project is for educational purposes and authorised security testing only.
+Do NOT scan or test domains without explicit permission from the owner.
